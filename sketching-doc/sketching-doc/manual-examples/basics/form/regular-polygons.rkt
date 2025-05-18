@@ -35,7 +35,7 @@
   (pop-matrix))
 
 
-(define (polygon2 x y radius npoints)
+(define (polygon x y radius npoints)
   (define angle (/ 2π npoints))
   (begin-shape)
   (for ([a (in-range 0.0 2π angle)])
@@ -43,7 +43,3 @@
     (define sy (+ y (* radius (sin a))))
     (vertex sx sy))
   (end-shape 'close))
-
-
-(define (polygon x y radius npoints)
-  (circle x y radius))
